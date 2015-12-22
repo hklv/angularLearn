@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.js"></script>
+    <script src="../../js/angular_directive_05.js"></script>
+    <link rel="stylesheet" href="../../css/Accordion.css"/>
+</head>
+<body ng-app="expModule" ng-controller="SomeController">
+<body ng-controller='SomeController' >
+<accordion>
+    <expander class='expander' ng-repeat='expander in expanders' expander-title='expander.title'>
+        {{expander.text}}
+    </expander>
+</accordion>
+</body>
+</body>
+</html>

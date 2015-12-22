@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.min.js"></script>
+    <script src="../../js/angular_ng_class.js"></script>
+    <style type="text/css">
+        .error {
+            background: red;
+        }
+
+        .warning {
+            background: yellow;
+        }
+
+        .selected {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body ng-app="appTest">
+<div ng-controller="appController">
+
+    <div ng-class="{error:isError,warning:isWarning}">{{messageText}}</div>
+    <button ng-click="showError()">Simulate Error</button>
+    <button ng-click="showWarning()">Simulate Warning</button>
+
+    <table>
+        <tr ng-repeat="rest in directory" ng-click="selectRestaurant($index)" ng-class="{selected:$index==selectedRow}">
+            <td>{{rest.name}}</td>
+            <td>{{rest.cuisine}}</td>
+        </tr>
+    </table>
+    <img ng-src="../../img/{{imgSrc}}"/>
+
+    {{12.9 | currency}}
+</div>
+</body>
+</html>

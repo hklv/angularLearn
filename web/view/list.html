@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="AMail">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.js"></script>
+    <script src="../../js/controller.js"></script>
+</head>
+<body ng-app>
+<div ng-controller="">
+
+</div>
+<table>
+    <tr>
+        <td><strong>Sender</strong></td>
+        <td><strong>Subject</strong></td>
+        <td><strong>Date</strong></td>
+    </tr>
+    <tr ng-repeat="mess in messages">
+        <td>{{mess.sender}}</td>
+        <td><a href="/view/{{mess.id}}">{{mess.subject}}</a></td>
+        <td>{{mess.date}}</td>
+    </tr>
+</table>
+</body>
+</html>

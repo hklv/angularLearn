@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.min.js"></script>
+    <script src="../../js/angular_shopcart2.js"></script>
+</head>
+<body>
+<div ng-app="shopCart2" ng-controller="shopController">
+    <div ng-repeat="item in items">
+        <span>{{item.title}}</span>
+        <input ng-model="item.quantity">
+        <span>{{item.price | currency}}</span>
+        <span>{{item.price * item.quantity | currency}}</span>
+    </div>
+    <div>Total: {{totalCart() | currency}}</div>
+    <div>Discount: {{bill.discount | currency}}</div>
+    <div>Subtotal: {{subtotal() | currency}}</div>
+</div>
+</body>
+</html>

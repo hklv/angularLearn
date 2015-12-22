@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="AMail">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.js"></script>
+    <script src="../../js/controller.js"></script>
+</head>
+<body>
+<div><strong>Subject:</strong>{{message.subject}}</div>
+<div><strong>Sender:</strong>{{message.sender}}</div>
+<div><strong>Date:</strong>{{message.date}}</div>
+<div>
+    <strong>TO:</strong>
+    <span ng-repeat="recipent in messages.recipients">{{recipent}}</span>
+</div>
+<div>{{message.message}}</div>
+<a href="">Back to message list</a>
+</body>
+</html>

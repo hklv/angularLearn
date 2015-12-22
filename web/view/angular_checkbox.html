@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.min.js"></script>
+    <script src="../../js/angular_checkbox.js"></script>
+</head>
+<body ng-app="myApp1">
+<form ng-controller="startUpController">
+    <!--<input type="checkbox" ng-model="checkBoxIn"/>
+    <span ng-bind="checkBoxIn"></span>-->
+
+    <form ng-submit="requestFunding()" ng-controller="startUpController">
+        Starting: <input ng-change="computeNeeded()" ng-model="startingEstimate">
+        Recommendation: {{needed}}
+        <button>Fun my startup</button>
+    </form>
+
+</form>
+</body>
+</html>
